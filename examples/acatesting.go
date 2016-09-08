@@ -14,7 +14,7 @@ import (
 	//"github.com/op/go-logging"
 )
 
-var myLogger = logging.MustGetLogger("example")
+//var myLogger = logging.MustGetLogger("example")
 
 type ServicesChaincode struct {
 }
