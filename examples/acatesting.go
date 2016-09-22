@@ -39,6 +39,9 @@ func (t *ServicesChaincode) Invoke(stub *shim.ChaincodeStub, function string, ar
 	 }
 	val, _ := stub.ReadCertAttribute("role")
 	myLogger.Debug("role => %v \n", string(val))
+	adminCert, _ := stub.GetCallerMetadata() 
+	account, _ := attr.GetValueFrom("role", adminCert)  
+	myLogger.Debug("account => %v \n", string(account))
 	return val, nil
 }
 
