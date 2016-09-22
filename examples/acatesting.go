@@ -28,7 +28,7 @@ func (t *ServicesChaincode) Init(stub *shim.ChaincodeStub, function string, args
  //       myLogger.Critical("Init Code 6")
 
 	err := stub.PutState("role", []byte("0"))
-	return nil, nil
+	return nil,err
 }
 
 
