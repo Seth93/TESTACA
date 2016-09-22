@@ -49,7 +49,7 @@ func (t *ServicesChaincode) Invoke(stub *shim.ChaincodeStub, function string, ar
 func (t *ServicesChaincode) Query(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
 	if function == "read" {
 		return read(stub, args)
-	}else 
+	}
 	return nil, errors.New("Invalid query function name. Expecting \"read\"")
 }
 
