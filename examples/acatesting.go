@@ -39,7 +39,7 @@ func (t *ServicesChaincode) Invoke(stub *shim.ChaincodeStub, function string, ar
 	 	return nil, errors.New("Invalid invoke function name. Expecting \"increment\"")
 	 }
 	val, _ := stub.ReadCertAttribute("role")
-	fmt.Printf("role => %v \n", string(val))
+	myLogger.Debug("role => %v \n", string(val))
 	return val, nil
 }
 
